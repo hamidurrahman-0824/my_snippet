@@ -1,0 +1,47 @@
+1. 
+git repository is out of sync(diverged history):
+if changes are made on both pcs without pulling first, the branches may diverge.then
+"git push" may be rejected, or "git pull" may not merge correctly.
+2.
+line ending issues(wind vs lin):
+windows uses crlf (/r/n) and linux uses lf(/n). if core.autocrlf is not set properly, git might think files different even
+when they're the same. this can cause "phantom" changes or failure t update.
+3.
+uncommitted changes
+if either pc has local cuncommitted changes, git may prevent pulling/pushing until those changes are resolved.
+4.branch confusion
+maybe on pc is on a diffrent branch than the other E.G. linux on main windows on master or a fewture branch is being used
+5. caching or shallow clone issues:
+rare but if the close was shalllow or cache issues exist "git pull" may not fetch al updates
+##fix
+1. check your branch
+on both pcs:
+git status
+git branch
+git log --oneline --graph --decorate --all -5
+2.Pull latest changes before pushing 
+always do this 
+git fetch origin
+git status
+git pull origin <branch_name>
+3.Push changes
+git add .
+git commit -m "Your message"
+git push origin <branch_name>
+4.set proper line endings:
+win
+git config --global core.autocrlf true
+lin
+git config --global core.autocrlf input
+##git add <files> 
+git commit -m "message"
+git push
+
+##git pull → edit → git add → git commit → git push
+@
+git status
+git branch
+git log --oneline --graph --decorate -5
+@
+git pull --rebase → edit → git add → git commit → git push
+
