@@ -1,0 +1,7 @@
+On the PC where you write
+git add .         # stage all changes
+git commit -m "your message"   # commit
+git push          # push to GitHub
+
+On the other PC
+git pull          # get latest changes

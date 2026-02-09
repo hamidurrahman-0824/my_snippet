@@ -1,0 +1,31 @@
+order_id,order_date,customer_id,customer_name,product,category,quantity,unit_price,discount,payment_method,city
+1001,2024-01-05,C001,Alice Johnson,Laptop,Electronics,1,1200,0.10,Credit Card,New York
+1002,2024-01-06,C002,Bob Smith,Headphones,Electronics,2,150,0.00,PayPal,Los Angeles
+1003,2024-01-07,C003,Charlie Lee,Coffee Maker,Home Appliances,1,90,0.05,Debit Card,Chicago
+1004,2024-01-08,C004,Diana King,Desk Chair,Furniture,1,220,0.15,Credit Card,Houston
+1005,2024-01-09,C001,Alice Johnson,Mouse,Electronics,3,25,0.00,Credit Card,New York
+1006,2024-01-10,C005,Ethan Brown,Notebook,Stationery,5,5,0.00,Cash,Phoenix
+1007,2024-01-11,C006,Fiona Green,Smartphone,Electronics,1,800,0.05,PayPal,San Diego
+1008,2024-01-12,C007,George White,Table,Furniture,1,350,0.20,Debit Card,Dallas
+1009,2024-01-13,C008,Hannah Black,Blender,Home Appliances,1,130,0.10,Credit Card,San Jose
+1010,2024-01-14,C002,Bob Smith,Keyboard,Electronics,1,70,0.00,PayPal,Los Angeles
+1011,2024-01-15,C009,Ian Miller,Pen Set,Stationery,4,12,0.00,Cash,Seattle
+1012,2024-01-16,C010,Jane Wilson,Monitor,Electronics,2,300,0.10,Credit Card,Boston
+1013,2024-01-17,C003,Charlie Lee,Toaster,Home Appliances,1,45,0.00,Debit Card,Chicago
+1014,2024-01-18,C004,Diana King,Sofa,Furniture,1,900,0.25,Credit Card,Houston
+1015,2024-01-19,C005,Ethan Brown,Stapler,Stationery,2,8,0.00,Cash,Phoenix
+1016,2024-01-20,C006,Fiona Green,Tablet,Electronics,1,450,0.05,PayPal,San Diego
+1017,2024-01-21,C007,George White,Lamp,Furniture,2,40,0.10,Debit Card,Dallas
+1018,2024-01-22,C008,Hannah Black,Vacuum Cleaner,Home Appliances,1,200,0.15,Credit Card,San Jose
+1019,2024-01-23,C009,Ian Miller,Notebook,Stationery,6,5,0.00,Cash,Seattle
+1020,2024-01-24,C010,Jane Wilson,Webcam,Electronics,1,110,0.00,Credit Card,Boston
+1021,2024-01-25,C001,Alice Johnson,Printer,Electronics,1,250,0.10,Debit Card,New York
+1022,2024-01-26,C002,Bob Smith,Router,Electronics,1,180,0.05,PayPal,Los Angeles
+1023,2024-01-27,C003,Charlie Lee,Microwave,Home Appliances,1,300,0.20,Credit Card,Chicago
+1024,2024-01-28,C004,Diana King,Cabinet,Furniture,1,500,0.15,Credit Card,Houston
+1025,2024-01-29,C005,Ethan Brown,Marker Set,Stationery,3,15,0.00,Cash,Phoenix
+1026,2024-01-30,C006,Fiona Green,Smartwatch,Electronics,1,220,0.10,PayPal,San Diego
+1027,2024-01-31,C007,George White,Bookshelf,Furniture,1,280,0.20,Debit Card,Dallas
+1028,2024-02-01,C008,Hannah Black,Air Fryer,Home Appliances,1,160,0.05,Credit Card,San Jose
+1029,2024-02-02,C009,Ian Miller,Envelope Pack,Stationery,10,3,0.00,Cash,Seattle
+1030,2024-02-03,C010,Jane Wilson,External HDD,Electronics,1,140,0.10,Credit Card,Boston
