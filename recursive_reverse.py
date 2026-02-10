@@ -38,4 +38,4 @@ print(recursive_reverse([1, 2, 3, 4, 5, 6]))
 
 		
 print(recursive_reverse([1,2,3,4,5,6]))
->>>>>>> 736b74bf6e7de68e7f1dea47043a33027b4aa517
+

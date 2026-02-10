@@ -2,3 +2,4 @@
 #slice
 #reduce
 #tail_recursion
+#rmdir /s /q "path" explanation: /s = everythinginside,/q= won't ask for permission
