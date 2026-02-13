@@ -1,0 +1,18 @@
+{
+    "firstName":"Hamidur Rahman",
+    "lastName":"Majed",
+    "hobbies":["running","swimming","singing"],
+    "age":28,
+    "hasChildren":true,
+    "children":[
+        {
+            "firstName":"Azad",
+            "age":5,
+        },
+        {
+            "firstName": "Bob",
+            "age":7
+        }
+
+    ]
+}
