@@ -15,3 +15,8 @@ def title_man(name):
         result+= w[0].upper()+ w[1:] + ' '
     return result.strip()
 print(title_man('the man of honour'))
+
+def pythonic_title_case(name):
+    return ' '.join(w[0].upper()+w[1:] for w in name.split())
+print(pythonic_title_case("john's book"))
+print(pythonic_title_case(" multiple  spaces "))
