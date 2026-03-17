@@ -12,7 +12,14 @@ def strong_password(p):
 
     return has_upper and has_lower and has_digit and has_special
 
+import re
 
+def strong_password(password):
+    pattern = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$'
+    return bool(re.match(pattern, password))
+
+print(strong_password("Abc@1234"))   # True
+print(strong_password("abc123"))     # False
 print(strong_password("Abc@1234"))   # True
 print(strong_password("abc123"))     # False
 def strong_password(p):
