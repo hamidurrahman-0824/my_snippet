@@ -1,0 +1,74 @@
+this line will run if upper line is correct,then current
+line will run.but if current line has a problem it will not run
+and raise an error which is okay for normal task but for file handling if this line do not run then it
+will not reach to file.close() line and it will keep open that file, that is the main 
+problem and to solve that context manager is needed [with open()], as it helps to reach 
+a file close method line.
+
+Use case        Example
+File I/O        open()
+Database connections        acquiring/releasing a connection
+Locks (threading)       threading.Lock()
+Temporary directories       tempfile.TemporaryDirectory()
+Mocking in tests        unittest.mock.patch()
+    
+"""Note:[all note]
+    # Test 1 — normal usage
+with DatabaseConnection()[] as db[]:
+    db.query("SELECT * FROM users")[]
+
+# Test 2 — with exception
+with DatabaseConnection() as db:
+    db.query("SELECT * FROM orders")
+    raise Exception("Something went wrong!")[][]
+```
+
+1:it is returned from created class, if we return self we can apply method from that class or we can return specific things from there
+2:our wish
+3:a method from created class][also the middle part of code, beginning is after with statement
+4:#raise Exception("Something went wrong!") is your test code to simulate an error — but in real life, you would never write this yourself!
+5:#Exception(exc_value), exc_value = something went wrong!
+---
+
+### Expected Output
+```
+# Test 1
+Connecting to database...[enter block]
+Executing: SELECT * FROM users[output from method/whatever we do]
+Closing connection...[output from exit block]
+
+# Test 2
+Connecting to database...
+Executing: SELECT * FROM orders
+Error occurred![from]
+Closing connection...    """
+class DatabaseConnection:
+    def __enter__(self):
+        print("Connecting to database...")
+        return self
+
+    def query(self, sql):
+        print(f"Executing: {sql}")
+
+    def __exit__(self, exc_type, exc_value, exc_tb):
+        if exc_type:
+            print("Error Occurred!")
+        print("Closing connection...")
+        
+with DatabaseConnection() as db:
+    db.query("SELECT * FROM users")
+
+with DatabaseConnection() as db:
+    db.query("SELECT * FROM orders")
+    raise Exception("Something went wrong!")
+def __exit__(self, exc_type, exc_value, exc_tb):  # long names
+def __exit__(self, exc_type, exc, tb):             # short names
+def __exit__(self, a, b, c):                       # any names!
+def __exit__(self, *args):                         # collect all!
+```
+
+**All are identical** — Python passes the same 3 values by position:
+```
+position 1 → exception type
+position 2 → exception message
+position 3 → traceback
