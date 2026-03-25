@@ -1,4 +1,6 @@
 import numpy as np
+
+exit()
 arr = np.array([
 				[
 				[1,2,3],
@@ -11,11 +13,11 @@ arr = np.array([
 				[17,18,19]
 				]
 				])#[[],[],[]]2d,[[[],[],[]], [[],[],[]]]3d
-print(arr.ndim)
-print(arr.shape)
-print(arr.size)
-print(arr.dtype)
-print(arr[:,:3])
+# print(arr.ndim)
+# print(arr.shape)
+# print(arr.size)
+# print(arr.dtype)
+# print(arr[:,:3])
 """For 1D arrays, you only use one slice: arr[:3].
 
 For 2D arrays, it’s arr[row_slice, column_slice].
@@ -32,3 +34,15 @@ So arr[:,:3] is valid only if arr has at least 2 dimensions. If arr is 1D or sca
 3D array → three indices: arr[depth, row, column]
 
 In general: arr[i1, i2, i3, ...] where the number of indices matches arr.ndim."""
+#0D
+ar = np.array('a')
+#1D
+a1d = np.array([1,2,3])
+#2d
+ar2d = np.array([
+    			[1,2,3],
+                [2,3,4]
+                ])
+#3D
+ar3d = np.array([[[],[],[]]])
+print(ar3d.ndim)
