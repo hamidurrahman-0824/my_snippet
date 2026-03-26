@@ -1,0 +1,3 @@
+#row,colum
+#shape
+#broadcasting
