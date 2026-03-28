@@ -1,0 +1,47 @@
+🔧 One-time setup (per repository)
+Create a repo on GitHub
+
+Go to GitHub → click New repository → give it a name (e.g., clean-code-practice).
+
+Copy the repo URL (HTTPS or SSH).
+
+Initialize Git locally
+
+bash
+cd path/to/your/project
+git init
+git remote add origin <your-repo-URL>
+🚀 Daily workflow (add, commit, push)
+Whenever you’ve made changes and want to upload them:
+
+Check status
+
+bash
+git status
+This shows which files are modified or new.
+
+Stage changes
+
+bash
+git add .
+. means “add all changes in this folder.”
+
+You can also add specific files: git add file.py.
+
+Commit changes
+
+bash
+git commit -m "Meaningful commit message"
+Example: "Added PrimeIter class with fixes"
+
+Push to GitHub
+
+bash
+git push origin main
+If your branch is called master, use master instead of main.
+
+First push may require:
+
+bash
+git push -u origin main
+(-u sets upstream so future pushes can just be git push).

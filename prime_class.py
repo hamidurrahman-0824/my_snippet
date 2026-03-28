@@ -6,7 +6,10 @@ class PrimeIter:
         self.limit = limit
         self.current = 0
     def __iter__(self):
-        return self
+        return self## the object itself is the iterator
+    """def __iter__(self):
+    return PrimeIteratorHelper(self.start, self.limit, self.step)
+    """
     def __next__(self):
         self.current += self.step
         lmt = self.current+self.step

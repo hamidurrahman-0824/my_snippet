@@ -1,3 +1,7 @@
+#Rule: LIFO (Last In, First Out)
+"""push(item) → add to the top
+
+pop() → remove from the top"""
 class Queue:
     def __init__(self):
         self.queue = []
