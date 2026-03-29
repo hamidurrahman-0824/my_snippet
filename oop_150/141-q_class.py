@@ -9,9 +9,9 @@ class Queue:
     def add_task(self,task):
         if task not in self.queue:
             self.queue.append(task)
-            print(f"({task}) added successfully")
-        else:
-            print("Task already exists.")
+            return f"({task}) added successfully"
+        
+        return "Task already exists."
     def remove_task(self,task):
         if task in self.queue:
             self.queue.remove(task)

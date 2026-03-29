@@ -91,7 +91,7 @@ class Animal:
         self.characteristics = ["living organism", "can move"]
 
     def show(self):
-        print(f"\n{name}'s characteristics:")
+        print(f"\n{self.name}'s characteristics:")
         for c in self.characteristics:
             print("-", c)
 

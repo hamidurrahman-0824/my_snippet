@@ -22,6 +22,11 @@ class Rectangle:
         self.w = w
         self.h = h
 
-    @property
+    @property#use "property" when it is fact/natural property
     def area(self):
         return self.w * self.h
+    def areaa(self):
+        return self.w * self.h
+r = Rectangle(6,5)
+print(r.areaa())
+print(r.area)#That is the difference with or without bracket

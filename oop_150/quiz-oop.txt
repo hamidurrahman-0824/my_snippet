@@ -1,0 +1,175 @@
+Python OOP Quick Notes
+1️⃣ Class vs Object
+class Dog:
+    pass
+Dog → class
+Dog() → object / instance
+
+Example:
+
+d = Dog()
+2️⃣ Constructor (__init__)
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+Purpose:
+
+initialize object attributes
+
+Example:
+
+p = Person("Alice")
+p.name → "Alice"
+3️⃣ self
+
+Meaning:
+
+reference to the current object
+
+Example:
+
+obj.method()
+
+Python internally does:
+
+Class.method(obj)
+4️⃣ Instance vs Class Variables
+Class variable
+class Dog:
+    legs = 4
+
+Shared by all objects.
+
+Access:
+
+Dog.legs
+Instance variable
+class Dog:
+    def __init__(self):
+        self.name = "Tom"
+
+Each object gets its own copy.
+
+5️⃣ Attribute lookup rule (important)
+
+Python searches attributes in this order:
+
+1️⃣ instance
+2️⃣ class
+
+Example:
+
+a.count
+
+If count not in object → Python checks class.
+
+6️⃣ Variable shadowing
+
+Example:
+
+class Dog:
+    legs = 4
+
+d = Dog()
+d.legs = 3
+
+Result:
+
+Dog.legs → 4
+d.legs   → 3
+
+Reason:
+
+instance variable overrides class variable
+7️⃣ Mutable class variable trap
+
+Bad design:
+
+class A:
+    items = []
+
+Example:
+
+a1.items.append(1)
+a2.items → [1]
+
+Reason:
+
+list is shared across all objects
+
+Better:
+
+def __init__(self):
+    self.items = []
+8️⃣ Inheritance
+
+Example:
+
+class Animal:
+    def speak(self):
+        print("sound")
+
+class Dog(Animal):
+    pass
+
+Dog automatically inherits methods.
+
+9️⃣ Method overriding
+
+Child class replaces parent method.
+
+class Dog(Animal):
+    def speak(self):
+        print("bark")
+🔟 @property
+
+Used for computed attributes.
+
+Example:
+
+class Rectangle:
+    @property
+    def area(self):
+        return self.w * self.h
+
+Usage:
+
+r.area
+
+instead of
+
+r.area()
+11️⃣ Dynamic attributes
+
+Python allows attributes to be created dynamically.
+
+Example:
+
+p = Person()
+p.age = 20
+12️⃣ Design rule
+
+Use class variable for shared constants.
+
+Example:
+
+class Tax:
+    rate = 0.2
+
+Not:
+
+self.rate = 0.2
+Mental Summary
+class → blueprint
+object → instance
+
+self → current object
+
+class variable → shared
+instance variable → unique
+
+lookup order:
+instance → class
+
+mutable class variables → dangerous
