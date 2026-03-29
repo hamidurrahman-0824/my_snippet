@@ -2,22 +2,23 @@ class Count:
     def __init__(self,limit):
         self.limit = limit
         self.current = 0
-    # def __iter__(self):
-    #     print("in iter block")
-    #     print(self)
-    #     return self
     def __iter__(self):
+        print("in iter block")
+        print(self)
         return self
+    # def __iter__(self):
+    #     return self
     def __next__(self):
         print("in next block")
         if self.current<self.limit:
             self.current += 1
             return self.current
-        else:
-            raise StopIteration
-# x = Count(10)
+        raise StopIteration
+
+
 # for x in Count(5):
 #     print(x)
+# exit()
 class EvenNumbers:
     
     def __init__(self, limit):
@@ -39,14 +40,13 @@ class Counter:
         self.start = start
         
     def __iter__(self):
+        print('Only once this block is used, it makes thing iterable.rest is handled by __next__')
         return self
     def __next__(self):
         if self.start<=0:
             raise StopIteration
-
-        else:
-            self.start-=1
-            return self.start
+        self.start-=1
+        return self.start
 
 obj = iter(Counter(5))
 print(next(obj))
