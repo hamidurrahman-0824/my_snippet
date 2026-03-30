@@ -1,4 +1,4 @@
-🔧 One-time setup (per repository)
+One-time setup (per repository)
 Create a repo on GitHub
 
 Go to GitHub → click New repository → give it a name (e.g., clean-code-practice).
@@ -11,7 +11,7 @@ bash
 cd path/to/your/project
 git init
 git remote add origin <your-repo-URL>
-🚀 Daily workflow (add, commit, push)
+Daily workflow (add, commit, push)
 Whenever you’ve made changes and want to upload them:
 
 Check status

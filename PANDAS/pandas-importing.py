@@ -1,5 +1,5 @@
 import pandas as pd
-import matplotlib.pyplot as plt
+
 df = pd.read_csv('customers-100.csv')
 df2 = pd.read_json('pretty-print.json')#print(df2)
 #SELECTIon by column
