@@ -1,0 +1,47 @@
+1. One-time setup (per repository)
+git repository is out of sync(diverged history): Create a repo on GitHub
+if changes are made on both pcs without pulling first, the branches may diverge.then 
+"git push" may be rejected, or "git pull" may not merge correctly. Go to GitHub → click New repository → give it a name (e.g., clean-code-practice).
+2. 
+line ending issues(wind vs lin): Copy the repo URL (HTTPS or SSH).
+windows uses crlf (/r/n) and linux uses lf(/n). if core.autocrlf is not set properly, git might think files different even 
+when they're the same. this can cause "phantom" changes or failure t update. Initialize Git locally
+3. 
+uncommitted changes bash
+if either pc has local cuncommitted changes, git may prevent pulling/pushing until those changes are resolved. cd path/to/your/project
+4.branch confusion git init
+maybe on pc is on a diffrent branch than the other E.G. linux on main windows on master or a fewture branch is being used git remote add origin <your-repo-URL>
+5. caching or shallow clone issues: Daily workflow (add, commit, push)
+rare but if the close was shalllow or cache issues exist "git pull" may not fetch al updates Whenever you’ve made changes and want to upload them:
+##fix 
+1. check your branch Check status
+on both pcs: 
+git status bash
+git branch git status
+git log --oneline --graph --decorate --all -5 This shows which files are modified or new.
+2.Pull latest changes before pushing 
+always do this Stage changes
+git fetch origin 
+git status bash
+git pull origin <branch_name> git add .
+3.Push changes . means “add all changes in this folder.”
+git add . 
+git commit -m "Your message" You can also add specific files: git add file.py.
+git push origin <branch_name> 
+4.set proper line endings: Commit changes
+win 
+git config --global core.autocrlf true bash
+lin git commit -m "Meaningful commit message"
+git config --global core.autocrlf input Example: "Added PrimeIter class with fixes"
+##git add <files> 
+git commit -m "message" Push to GitHub
+git push 
+ bash
+##git pull → edit → git add → git commit → git push git push origin main
+@ If your branch is called master, use master instead of main.
+git status 
+git branch First push may require:
+git log --oneline --graph --decorate -5 
+@ bash
+git pull --rebase → edit → git add → git commit → git push git push -u origin main
+ (-u sets upstream so future pushes can just be git push).

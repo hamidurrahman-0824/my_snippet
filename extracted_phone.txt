@@ -1,0 +1,42 @@
+# US-Based Demo Numbers (Fiction/Documentation Safe)
++1 (555) 010-9999
++1 (555) 012-3456
++1 (555) 867-5309
++1 (555) 123-4567
++1 (555) 987-6543
++1 (555) 246-8135
+
+# UK-Based Demo Numbers (Ofcom Reserved for Drama/Test)
+01632 960001
+020 7946 0001
+07700 900001
+0113 496 0000
+0191 498 0000
+07700 900999
+
+# Bangladesh Demo Numbers (Standard Formats)
+# (Using 000/111 sequences which are typically inactive/test)
++880 1700-000000 (Grameenphone)
++880 1900-111222 (Banglalink)
++880 1800-333444 (Robi)
++880 1600-555666 (Airtel)
++880 1500-777888 (Teletalk)
+01711-000000
+01911-111111
+01811-222222
+
+# International & Mixed Formats
++44 7700 900002
++1 555 019 0123
++91 98765 43210 (India Example)
++61 491 570 006 (Australia Test)
++81 90-1234-5678 (Japan Example)
++49 151 23456789 (Germany Example)
+#
+000
+999
+1234351
+'abc'
+def,defd
+demo text
+this is a phone number validator text

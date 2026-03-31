@@ -1,0 +1,21 @@
+##1
+df[key]-> dict behaviour
+df[::2]-> works too but row wise slice
+df.loc[index]-> gives whole row info
+
+df.loc[1:4:1,]->loc[row,col]
+df.iloc[:,:] -> works like numpy indexing
+.loc[row] → rows only.
+
+.loc[:, col] → columns only.
+
+.loc[row, col] → both row and column (single point or slice).
+df.loc[row_label, col_label] (preferred, explicit)
+
+df["colname"][row_label] (works too, but less clear).
+⚠️ Partially correct
+
+Remember: iloc excludes the end index.
+df.loc[]    labels(names)    inclusive
+df.iloc[]   positions (numbers) exclusive
+##

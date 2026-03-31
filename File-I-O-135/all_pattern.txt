@@ -1,0 +1,34 @@
+##
+01712345678
+01987654321
+pattern = r'^\d{11}$'
+re.match(pattern,line)-> from start to end of line must be matched
+##
+pattern = r'^01[3-9]\d{8}$' more reliable
+pattern = r'^01[3-9][-\s]?\d{3}[-\s]?\d{5}$' robust
+##
+✅ Most common phone regex you'll remember easily
+
+^01[3-9]\d{8}$
+
+Meaning:
+
+01 + valid operator digit + 8 more digits
+
+Total = 11 digits
+##
+International
+pattern = r'^\+?\d{7,15}$'
+^        start of line
+\+?      optional + (international code)
+\d{7,15} 7–15 digits
+$        end of line
+##
+realistic
+pattern = r'^\+?\d[\d\s\-()]{7,}\d$'
+##
+Function	Purpose
+match()	check start of string
+search()	find first match
+findall()	extract all matches
+sub()	replace text
