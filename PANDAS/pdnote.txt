@@ -19,3 +19,74 @@ Remember: iloc excludes the end index.
 df.loc[]    labels(names)    inclusive
 df.iloc[]   positions (numbers) exclusive
 ##
+df.head()          # first rows
+df.tail()          # last rows
+df.shape           # rows,columns
+df.columns         # column names
+df.iloc[0]         # first row
+df.iloc[:,0]       # first column
+df.loc[:,["Age"]]  # named column
+df.sample(5)       # random rows
+df[df["Age"]>30]   # filtering
+df.sort_values("Age")
+##
+Method       Returns True when
+isna()      value is missing
+notna()     value is not missing
+#
+1️⃣ What groupby means (core idea)
+
+Think:
+
+split → apply → combine
+
+Example:
+
+Group customers by Country
+Then calculate something for each group
+
+
+11️⃣ One very important rule
+
+groupby must be followed by an operation:
+
+Examples:
+
+.mean()
+.sum()
+.count()
+.size()
+.max()
+.min()
+.agg()
+Otherwise nothing happens.
+
+
+Mental model
+
+.agg() simply does:
+
+for each group:
+    apply operation to column
+
+So pandas sees:
+
+"mean" → call .mean()
+"count" → call .count()
+
+
+Simple rule
+agg({
+ column : operation
+})
+import pandas as pd
+
+data = {
+    "Customer": ["Alice","Bob","Charlie","David","Eve","Frank"],
+    "Country": ["USA","USA","UK","UK","India","India"],
+    "City": ["NY","LA","London","Manchester","Delhi","Mumbai"],
+    "Ages": [25, 35, 30, 40, 28, 32],
+    "Orders": [5, 3, 4, 2, 6, 1]
+}
+
+df = pd.DataFrame(data)

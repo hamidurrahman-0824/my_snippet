@@ -21,3 +21,15 @@ arr = df[["Ages"]]
 print(df[df["Ages"].between(25,40) & df["Email"].str.contains("gmail|yahoo", case=False)])
 df = pd.read_csv("customers-100a.csv",index_col="First Name")
 #multi_row = df.loc[]
+#filtering
+df[
+    df["Ages"].between(25,40)&
+    df["Email"].str.contains("gmail|yahoo")
+]
+df[
+    (df["Ages">=25]) & (df["Ages"]<=40) &
+    (
+        df["Email"].str.contains("gmail")|
+        df["Email"].str.contains("yahoo")
+    )
+]
