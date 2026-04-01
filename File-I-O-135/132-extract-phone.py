@@ -1,9 +1,8 @@
 import re
-def is_phone(num):
-    pattern = ''
-    return re.match(pattern,num.strip())
-    
-
+string = '01342400777 01342400777 01342400777 01342400777 '
+pattern = r'01[3-9]\d{8}'
+print(re.findall(pattern,string))
+exit()
 # This finds all sequences of digits (1 or more)
 #numbers = re.findall(r'\d+', text)
 with open("phone_numbers.txt",'r') as f,\

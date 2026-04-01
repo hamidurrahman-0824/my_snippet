@@ -37,7 +37,7 @@ with open('gittroubleshots.txt',encoding="utf-8") as f1, \
      open('merge_file.txt','w',encoding="utf-8") as out:
 
     for a,b in zip(f1,f2):
-        out.write(a.strip() + " " + b.strip() + "\n")
+        out.write(a.strip() + " " + b.strip() + "\n")# a.strip()+" " +b.strip()+"\n"->a.strip()+" "+b
 
 with open('merge_file.txt',encoding="utf-8") as f:
     print(f.read())

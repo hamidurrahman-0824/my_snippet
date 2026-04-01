@@ -1,1 +1,47 @@
-(-u sets upstream so future pushes can just be git push).. means “add all changes in this folder.”bashcd path/to/your/projectCheck statusCommit changesCopy the repo URL (HTTPS or SSH).Create a repo on GitHubDaily workflow (add, commit, push)Example: "Added PrimeIter class with fixes"First push may require:git add .git commit -m "Meaningful commit message"git initgit push -u origin maingit push origin maingit remote add origin <your-repo-URL>git statusGo to GitHub → click New repository → give it a name (e.g., clean-code-practice).If your branch is called master, use master instead of main.Initialize Git locallyOne-time setup (per repository)Push to GitHubStage changesThis shows which files are modified or new.Whenever you’ve made changes and want to upload them:You can also add specific files: git add file.py.
+ONE-TIME SETUP (PER REPOSITORY)
+CREATE A REPO ON GITHUB
+
+GO TO GITHUB → CLICK NEW REPOSITORY → GIVE IT A NAME (E.G., CLEAN-CODE-PRACTICE).
+
+COPY THE REPO URL (HTTPS OR SSH).
+
+INITIALIZE GIT LOCALLY
+
+BASH
+CD PATH/TO/YOUR/PROJECT
+GIT INIT
+GIT REMOTE ADD ORIGIN <YOUR-REPO-URL>
+DAILY WORKFLOW (ADD, COMMIT, PUSH)
+WHENEVER YOU’VE MADE CHANGES AND WANT TO UPLOAD THEM:
+
+CHECK STATUS
+
+BASH
+GIT STATUS
+THIS SHOWS WHICH FILES ARE MODIFIED OR NEW.
+
+STAGE CHANGES
+
+BASH
+GIT ADD .
+. MEANS “ADD ALL CHANGES IN THIS FOLDER.”
+
+YOU CAN ALSO ADD SPECIFIC FILES: GIT ADD FILE.PY.
+
+COMMIT CHANGES
+
+BASH
+GIT COMMIT -M "MEANINGFUL COMMIT MESSAGE"
+EXAMPLE: "ADDED PRIMEITER CLASS WITH FIXES"
+
+PUSH TO GITHUB
+
+BASH
+GIT PUSH ORIGIN MAIN
+IF YOUR BRANCH IS CALLED MASTER, USE MASTER INSTEAD OF MAIN.
+
+FIRST PUSH MAY REQUIRE:
+
+BASH
+GIT PUSH -U ORIGIN MAIN
+(-U SETS UPSTREAM SO FUTURE PUSHES CAN JUST BE GIT PUSH).
