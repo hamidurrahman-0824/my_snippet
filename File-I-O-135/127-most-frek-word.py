@@ -1,11 +1,5 @@
-from collections import Counter
-with open('textfile.txt','r') as file:
-    
-    pass
-
-#own idea
-from collections import defaultdict
-
+from collections import Counter,defaultdict
+print(repr(print))
 freq = {}
 
 with open("textfile.txt") as f:
