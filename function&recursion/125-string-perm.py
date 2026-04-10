@@ -5,7 +5,7 @@ perm = []
 for i in range(len(string)):
     perm.append(newstr[i:len(string)+i])
 
-def permute(s):
+def permute(s):#
     if len(s) == 1:
         return [s]
 
@@ -26,3 +26,4 @@ result = permutations(s)
 
 for p in result:
     print("".join(p))
+   
