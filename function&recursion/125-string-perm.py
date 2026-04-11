@@ -18,12 +18,30 @@ def permute(s):#
     return result
 
 
-print(permute("ABC"))
+#print(permute("ABC"))
 from itertools import permutations
 
 s = "ABC"
 result = permutations(s)
 
-for p in result:
-    print("".join(p))
-   
+#for p in result:
+#    print("".join(p))
+"""i=0
+-ch=a,rmn=bc,len=2
+	i=0,ch=b,rmn=c->[c]
+	i=1,ch=c,rmn=b->[b]
+	for p in [c][b]
+		
+
+"""  
+def prm(s):
+	if len(s) == 1:
+		return [s]
+	result = []
+	for i in range(len(s)):#3(0->ch->a,rmn->bc,prm(rmn)->),
+		ch = s[i]#a
+		rmn = s[:i]+s[i+1:]#bc
+		for p in prm(rmn):#prm(bc)->ch=b,rmn=c->prm(rmn=c)->[c]
+			result.append(ch+t)#
+	return result
+print(prm('abc'))
