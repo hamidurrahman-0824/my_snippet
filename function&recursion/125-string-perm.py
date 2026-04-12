@@ -24,6 +24,7 @@ from itertools import permutations
 s = "ABC"
 result = permutations(s)
 
+<<<<<<< HEAD
 #for p in result:
 #    print("".join(p))
 """i=0
@@ -45,3 +46,32 @@ def prm(s):
 			result.append(ch+t)#
 	return result
 print(prm('abc'))
+=======
+for p in result:
+    print("".join(p))
+#take a character find remaining and add them again
+def perm(s):#abc
+    if len(s)==1:
+        return [s]
+    
+    result = []
+    for i in range(len(s)):#0 in 3,0 in 2
+        char = s[i]#char = a,b
+        remaining = s[:i]+s[i+1:]#bc,ac,
+
+        for p in perm(remaining):#perm(bc),perm(ac),perm(ab)
+            result.append(char+p)
+    return result
+def prm(s):
+    l = len(s)
+    if l ==1:
+        return s
+    result = []
+    for i in range(l):
+        cur = s[i]
+        rmn = s[:i]+s[i+1:]
+        for i in prm(rmn):
+            result.append(cur+i)
+    return result
+print(len(prm('dcef')))
+>>>>>>> 8e91c76 (end of permutaion)
