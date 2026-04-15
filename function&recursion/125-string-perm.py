@@ -42,7 +42,7 @@ def prm(s):
 		ch = s[i]#a
 		rmn = s[:i]+s[i+1:]#bc
 		for p in prm(rmn):#prm(bc)->ch=b,rmn=c->prm(rmn=c)->[c]
-			result.append(ch+t)#
+			result.append(ch+p)#
 	return result
 print(prm('abc'))
 def permut(s):
@@ -50,4 +50,9 @@ def permut(s):
 		return [s]
 	result = []
 	for i in range(len(s)):
-		
+		ch = s[i]
+		reman = s[:i]+s[i+1:]
+		for i in permut(reman):
+			result.append(ch+i)
+	return result
+print(permut("Maj"))
