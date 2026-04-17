@@ -16,10 +16,6 @@ def merge_sort(arr):
 
     return result + left + right
 
-
-print(merge_sort([5, 2, 8, 1]))
-
-
 def merge(left, right):
     result = []
     i = j = 0
@@ -48,4 +44,51 @@ def merge_sort(arr):
     return merge(left, right)
 
 
-print(merge_sort([5, 2, 8, 1]))
+def mergee(arr):
+    if len(arr)<=1:
+        return arr
+    mid = len(arr)//2
+    left = mergee(arr[:mid])   
+    right = mergee(arr[mid:])
+
+    result = []
+    i=j=0
+
+    while i<len(left) and j<len(right):#eq:while left and right
+        if left[i]<right[j]:
+            result.append(left[i])
+            i+=1
+        else:
+            result.append(right[j])
+            j+=1
+
+    result+=left[i:]
+    result+=right[j:]
+    return result
+print(mergee([0,0,8,7,34,2,3,2,1]))
+def mergesort(arr):
+    if len(arr) <= 1:
+        return arr
+
+    mid = len(arr)//2
+    left = mergesort(arr[:mid])
+    right = mergesort(arr[mid:])
+
+    result = []
+    i = j = 0
+
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+
+    result += left[i:]
+    result += right[j:]
+
+    return result
+
+
+print(mergesort([8,3,1,0,1,7,0,10,2]))

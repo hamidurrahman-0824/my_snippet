@@ -32,3 +32,11 @@ def fixed_letter_perm(s):
 	return result
 	
 print(fixed_letter_perm('a1b'))
+def anoi(n,source,helper,destination):
+	if n==1:
+		print(f"{n} disk moved to {destination} from {source}")#direct move from src to dest
+		return
+	anoi(n-1,source,destination,helper)#src->dest(helper)
+	print(f"{n-1} moved to {helper} from {source}")
+	anoi(n-1,helper,source,destination)#src(helper)->dest
+anoi(3,"a","v","c")
