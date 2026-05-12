@@ -1,1 +1,41 @@
 business question → metric → visualization
+#
+Question	    Best Chart
+category        comparison	bar
+time trend	    line
+distribution	histogram
+relationship	scatter
+matrix/pattern	heatmap
+#
+Remove:
+duplicate code
+abandoned experiments
+unnecessary prints
+Keep:
+best questions
+best visualizations
+clean logic flow
+#
+Imports
+↓
+Load dataset
+↓
+Data cleaning
+↓
+EDA
+↓
+Visualizations
+↓
+Insights / conclusions
+#
+add business question
+#
+- Ratings were concentrated between 3–4
+- Discounts did not strongly affect ratings
+- Some categories had significant missing values
+#
+Readme
+project objective
+tools used
+key findings
+#

@@ -16,5 +16,4 @@ def power_set(arr):
     rest = power_set(arr[1:])
     return rest + [[arr[0]] + subset for subset in rest]
 
-
 print(power_set([1,2,3]))
